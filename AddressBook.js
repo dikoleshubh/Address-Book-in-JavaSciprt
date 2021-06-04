@@ -398,7 +398,7 @@ if (hasDuplicate(addressBook)) {
     console.log("Yoour Address Book does not consists Duplicates");
 }*/
 
-//UC8 - Ability to Search Contact in City
+/*UC8 - Ability to Search Contact in City
  
 console.log("\n***Search Contact in City***");
 var firstname = "Venu";
@@ -430,4 +430,9 @@ requiredArray = addressBook.filter(searchByCity);
 console.log("Contacts from " + cityname + " City:");
 requiredArray.forEach(contact => {
     console.log(contact.toString());
-});
+});*/
+//UC10 - Ability to get number of Contacts count by City
+console.log("\n*******Count Contacts by City******");
+cityname = "Satara";
+let countByCity = addressBook.filter(searchByCity).length;
+console.log("There are " + countByCity + " Contacts from " + cityname + " City");
