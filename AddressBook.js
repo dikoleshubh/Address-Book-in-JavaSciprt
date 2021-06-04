@@ -227,7 +227,8 @@ addressBook.push(Profiles);
 addressBook.push(Profiles);
 console.log(addressBook);
 */
-//UC4 - Ability to Search & edit exixting Contact
+
+/*UC4 - Ability to Search & edit exixting Contact
 const prompt = require('prompt-sync')({sigint: true});
 console.log("\n**********Edit Contact**********");
 var input = prompt("Enter First Name to Search Contact: ");
@@ -332,6 +333,31 @@ addressBook.forEach(person => {
             default:
                 console.log("Nothing modified !!");
                 break;
+        }
+    }
+});
+
+if (!status) {
+    console.log("Contact not found !!!");
+}*/
+
+//UC5 - Ability to Search & Delete existing Contact
+console.log("\n**********Delete Contact**********");
+var input = prompt("Enter First Name to Search Contact: ");
+var status = false;
+addressBook.forEach(person => {
+    if (person.firstName == input) {
+        console.log("\nContact found!");
+        status = true;
+        var option = prompt("Press 'Y' to remove Contact & any key to exit ");
+        if ((option == "Y") ||(option == "y")) {
+            var index = addressBook.indexOf(person);
+            if (index > -1) {
+                addressBook.splice(index,1);
+                console.log("Contact Deleted Successfully !!")
+                console.log("\n*********Display Contacts**********");
+                console.log(addressBook);
+            }
         }
     }
 });
