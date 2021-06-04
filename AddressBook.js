@@ -205,11 +205,11 @@ console.log("<<<<<Welcome to AddressBook Application>>>>>");
 //console.log(Profile.toString());
 
 //UC2 - Ability to ensure valid Contact is Added in Address Book
-var firstName = "Beageleshwar";
-var lastName = "Champa";
-var address = "Bridgelabz";
-var city = "Mumbai";
-var state = "Maharashtra";
+//var firstName = "Beageleshwar";
+//var lastName = "Champa";
+//var address = "Bridgelabz";
+//var city = "Mumbai";
+/*var state = "Maharashtra";
 var zip = 303901;
 var mobileNumber = "91 7083805302";
 var email = "champa@gmail.com";
@@ -220,5 +220,10 @@ try {
     }
 } catch (error) {
     console.log(error);
-}
+}*/
+//UC3 - Ability to create Address Book Array & Add Contacts to Array
+var addressBook = new Array();
+addressBook.push(Profiles);
+addressBook.push(Profiles);
+console.log(addressBook);
 
