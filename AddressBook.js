@@ -379,7 +379,7 @@ var counts = () => {
   const nameCollection = addressBook.reduce(counts);//counts is sum of  array i.e will be the count
   console.log("Address Book has " + nameCollection.size + " Contacts")*/
 
-    //UC7 -Find duplicate Entry in Address Book
+    /*UC7 -Find duplicate Entry in Address Book
 console.log("\n~~~~~~~~!~!~~Check for Duplicate entries~~!~!~~~~~~~~~");
 
 function hasDuplicate(addressBook) {
@@ -396,4 +396,22 @@ if (hasDuplicate(addressBook)) {
     console.log("Your Address Book has Duplicate entries");
 } else {
     console.log("Yoour Address Book does not consists Duplicates");
+}*/
+
+//UC8 - Ability to Search Contact in City
+ 
+console.log("\n******Search Contact in City******");
+var firstname = "Venu";
+var lastname = "Champa";
+var cityname = "Bridgelabz";
+
+let searchInCity = (contact) => {
+  return contact.firstName == firstname && contact.lastName == lastname && contact.city == cityname;
+}
+let requiredArray = addressBook.filter(searchInCity);//Using Array functions filter
+
+if (requiredArray.length > 0) {
+    console.log("Contact found in " + cityname + " City");
+} else {
+    console.log("Contact not found in " + cityname + " City");
 }
