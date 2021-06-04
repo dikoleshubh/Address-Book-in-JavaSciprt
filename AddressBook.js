@@ -172,7 +172,7 @@ class Contact {
  }
  
  function validateZip(zip) {
-     let zipPattern = RegExp("^[0-9]{6}$");
+     let zipPattern = RegExp("^[1-9]{1}[0-9]{2}[ ]?[0-9]{3}$");
      if (zipPattern.test(zip)) {
          return true;
      } else {
@@ -201,8 +201,8 @@ class Contact {
 console.log("<<<<<Welcome to AddressBook Application>>>>>");
 
 //UC1 - Ability to Create Contact in Address Book
-let Profile = new Contact("Venu","Champa","COEP","Pune","Maharastr",444505,865343543,"venu@gmail.com");
-console.log(Profile.toString());
+//let Profile = new Contact("Venu","Champa","COEP","Pune","Maharastr",444505,865343543,"venu@gmail.com");
+//console.log(Profile.toString());
 
 //UC2 - Ability to ensure valid Contact is Added in Address Book
 var firstName = "Beageleshwar";
@@ -210,14 +210,15 @@ var lastName = "Champa";
 var address = "Bridgelabz";
 var city = "Mumbai";
 var state = "Maharashtra";
-var zip = 40001;
-var mobileNumber = "91 859662102";
+var zip = 303901;
+var mobileNumber = "91 7083805302";
 var email = "champa@gmail.com";
 try {
     if (validateFirstName(firstName)&&validateLastName(lastName)&&validateAddress(address)&&validateCity(city)&&validateState(state)&&validateZip(zip)&&validateMobileNumber(mobileNumber)&&validateEmail(email)) {
-        var Profile = new Contact(firstName,lastName,address,city,state,zip,mobileNumber,email);
-        console.log(vaibhavi.toString());
+        var Profiles = new Contact(firstName,lastName,address,city,state,zip,mobileNumber,email);
+        console.log(Profiles.toString());
     }
 } catch (error) {
     console.log(error);
 }
+
