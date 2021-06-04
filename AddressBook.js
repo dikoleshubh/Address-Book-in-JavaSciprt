@@ -365,7 +365,7 @@ addressBook.forEach(person => {
 if (!status) {
     console.log("Contact not found !!!");
 }*/
-//UC6 - Ability to find number of Contacts in Address Book
+/*UC6 - Ability to find number of Contacts in Address Book
 
 console.log("\n**********Count Contacts**********");
 var counts = () => {
@@ -377,4 +377,23 @@ var counts = () => {
   }
 
   const nameCollection = addressBook.reduce(counts);//counts is sum of  array i.e will be the count
-  console.log("Address Book has " + nameCollection.size + " Contacts")
+  console.log("Address Book has " + nameCollection.size + " Contacts")*/
+
+    //UC7 -Find duplicate Entry in Address Book
+console.log("\n~~~~~~~~!~!~~Check for Duplicate entries~~!~!~~~~~~~~~");
+
+function hasDuplicate(addressBook) {
+    let NAMESet = new Set();
+    let NAMEArray = new Array();
+    addressBook.forEach(contact => {
+      NAMESet.add(contact.name);
+      NAMEArray.push(contact.name);
+    });
+    return NAMESet.size != NAMEArray.length;
+}
+
+if (hasDuplicate(addressBook)) {
+    console.log("Your Address Book has Duplicate entries");
+} else {
+    console.log("Yoour Address Book does not consists Duplicates");
+}
