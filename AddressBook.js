@@ -436,3 +436,11 @@ console.log("\n*******Count Contacts by City******");
 cityname = "Satara";
 let countByCity = addressBook.filter(searchByCity).length;
 console.log("There are " + countByCity + " Contacts from " + cityname + " City");
+//UC11 - Ability to sort entries alphabetically by Person's Name
+var sortedByName = addressBook.sort((a, b) => {
+    return (a.firstName).localeCompare(b.firstName)
+});
+
+sortedByName.forEach(contact => {
+    console.log(contact.toString());
+});
