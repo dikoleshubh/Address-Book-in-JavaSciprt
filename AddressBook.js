@@ -415,3 +415,19 @@ if (requiredArray.length > 0) {
 } else {
     console.log("Contact not found in " + cityname + " City");
 }
+
+//UC9 - Ability to view contacts by specific City
+console.log("\n*^^^^^View Contacts by City^^^^^");
+cityname = "Bridgelabz";
+
+let searchByCity = (contact) => {
+    if (contact.city == cityname) {
+        return contact;
+    }
+}
+requiredArray = addressBook.filter(searchByCity);
+
+console.log("Contacts from " + cityname + " City:");
+requiredArray.forEach(contact => {
+    console.log(contact.toString());
+});
