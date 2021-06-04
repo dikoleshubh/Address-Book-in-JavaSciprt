@@ -341,7 +341,7 @@ if (!status) {
     console.log("Contact not found !!!");
 }*/
 
-//UC5 - Ability to Search & Delete existing Contact
+/*UC5 - Ability to Search & Delete existing Contact
 console.log("\n**********Delete Contact**********");
 var input = prompt("Enter First Name to Search Contact: ");
 var status = false;
@@ -364,4 +364,17 @@ addressBook.forEach(person => {
 
 if (!status) {
     console.log("Contact not found !!!");
-}
+}*/
+//UC6 - Ability to find number of Contacts in Address Book
+
+console.log("\n**********Count Contacts**********");
+var counts = () => {
+    var nameSet = new Set();
+    addressBook.forEach( contact => {
+        nameSet.add(contact.name);
+    });
+    return nameSet;
+  }
+
+  const nameCollection = addressBook.reduce(counts);//counts is sum of  array i.e will be the count
+  console.log("Address Book has " + nameCollection.size + " Contacts")
