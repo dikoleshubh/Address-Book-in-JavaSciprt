@@ -431,7 +431,7 @@ console.log("Contacts from " + cityname + " City:");
 requiredArray.forEach(contact => {
     console.log(contact.toString());
 });*/
-//UC10 - Ability to get number of Contacts count by City
+/*UC10 - Ability to get number of Contacts count by City
 console.log("\n*******Count Contacts by City******");
 cityname = "Satara";
 let countByCity = addressBook.filter(searchByCity).length;
@@ -442,5 +442,36 @@ var sortedByName = addressBook.sort((a, b) => {
 });
 
 sortedByName.forEach(contact => {
+    console.log(contact.toString());
+});*/
+
+/UC12 - Ability to sort by City,State,Zip
+console.log("\n********Sort Contacts by City******");
+
+var sortedByCity = addressBook.sort((a, b) => {
+    return (a.city).localeCompare(b.city);
+});
+
+sortedByCity.forEach(contact => {
+    console.log(contact.toString());
+});
+
+console.log("\n********Sort Contacts by State******");
+
+var sortedByState = addressBook.sort((a, b) => {
+    return (a.state).localeCompare(b.state);
+});
+
+sortedByState.forEach(contact => {
+    console.log(contact.toString());
+});
+
+console.log("\n*******Sort Contacts by Zip******");
+
+var sortedByZip = addressBook.sort((a, b) => {
+    return (String(a.zip)).localeCompare(String(b.zip));
+});
+
+sortedByZip.forEach(contact => {
     console.log(contact.toString());
 });
