@@ -400,7 +400,7 @@ if (hasDuplicate(addressBook)) {
 
 //UC8 - Ability to Search Contact in City
  
-console.log("\n******Search Contact in City******");
+console.log("\n***Search Contact in City***");
 var firstname = "Venu";
 var lastname = "Champa";
 var cityname = "Bridgelabz";
